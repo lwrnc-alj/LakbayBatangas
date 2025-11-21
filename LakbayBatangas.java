@@ -1,7 +1,6 @@
 import java.util.*;
 
 public class LakbayBatangas {
-
     /* ---------------------------
      * Inner class: Player
      * Encapsulation: private fields, getters/setters, behavior methods.
@@ -44,11 +43,8 @@ public class LakbayBatangas {
             return String.format("%s ❤️ x%d  ✨ %d pts", name, hearts, points);
         }
     }
-
     /* ---------------------------
-     * Abstract superclass: Place
-     * Demonstrates abstraction and will be extended by concrete subclasses.
-     * Protected fields illustrate protected access in inheritance hierarchy.
+     * Abstract superclass: Place, Demonstrates abstraction and will be extended by concrete subclasses., Protected fields illustrate protected access in inheritance hierarchy.
      * --------------------------- */
     public abstract class Place {
         protected String name;
@@ -60,10 +56,8 @@ public class LakbayBatangas {
             this.description = description;
             this.questions = questions;
         }
-
         // Abstract method to be overridden by subclasses (polymorphism)
         public abstract void explore(Player player, Scanner scanner);
-
         // Shared quiz conduction logic used by subclasses
         protected void conductQuiz(Player player, Scanner scanner) {
             System.out.println("----------------------------------------");
@@ -551,3 +545,4 @@ public class LakbayBatangas {
         game.play();
     }
 }
+
