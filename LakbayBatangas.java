@@ -322,92 +322,68 @@ public class LakbayBatangas {
         unlockSystem = new UnlockSystem(municipalities);
     }
 
-    // Setup mock data: 6 municipalities, each with 2 spots, each spot with 2 questions
+    // Setup mock data: 6 municipalities, each with 2 spots, each spot with 1 question
     private void setupMockData() {
-        // For brevity and clarity: create 12 spots with 2 questions each
+        // For brevity and clarity: create 12 spots with 1 question each
         // Municipality thresholds: municipality 0 unlocked, others require progressive points
-        municipalities.add(createMunicipality(0, "Balete Bay", 0,
+        municipalities.add(createMunicipality(0, "Taal", 0,
                 new Place[] {
-                        new Beach("Silangan Beach", "Gentle waves and sunrise views.", createQs(
-                                "What color is the typical sunrise at Silangan?",
-                                new String[] {"Blue", "Orange", "Purple"}, 1,
-                                "Silangan's traditional snack is called?",
-                                new String[] {"Kakanin", "Sinigang", "Adobo"}, 0)),
-                        new HeritageSite("Balete Shrine", "A shrine with local folklore.", createQs(
-                                "What tree is central to Balete folklore?",
-                                new String[] {"Oak", "Balete", "Pine"}, 1,
-                                "What item do visitors leave at the shrine?",
-                                new String[] {"Coins", "Leaves", "Notes"}, 0))
+                        new Mountain("Taal Volcano", "One of the popular attractions in this municipality is the Taal Volcano.", createQs(
+                                "It is known for what unique geographical features?",
+                                new String[] {"A. Volcano within a lake, and a lake within a volcano", "B. Volcano between two mountains", "C. Volcano in the middle of the ocean, and a lake within a volcano"}, 1,),
+                        new HeritageSite("Taal Basilica", "Officially the Minor Basilica of Saint Martin of Tours,  the architecture blends Baroque and Neoclassical styles, featuring a grand altar, stained glass windows, and a dome ceiling. It was built between 1856 and 1878, was designated a national historical landmark in 1974, and has survived earthquakes in 2017 and the 2020 Taal Volcano eruption.", createQs(
+                                " It is famous for its title as the?",
+                                new String[] {"A. The oldest church in the Philippines", "B. The largest church in the Philippines and Asia", "C. The most preserved church in Philippines and Asia"}, 1,)
                 }));
 
         municipalities.add(createMunicipality(1, "Lemery", 10,
                 new Place[] {
-                        new Mountain("Mount Payapa", "A short hike with panoramic views.", createQs(
-                                "How many peaks does Mount Payapa have?",
-                                new String[] {"One", "Two", "Three"}, 0,
-                                "What bird is often seen on the trail?",
-                                new String[] {"Eagle", "Sparrow", "Kingfisher"}, 2)),
-                        new HeritageSite("Lemery Plaza", "Town center with historical markers.", createQs(
-                                "Which era built Lemery Plaza?",
-                                new String[] {"Spanish", "American", "Japanese"}, 0,
-                                "Which activity is common at the plaza?",
-                                new String[] {"Basketball", "Fishing", "Skiing"}, 0))
+                        new HeritageSite("Fantasy World", "A medieval-themed amusement park. The main attraction is the large, colorful castle, but it also features other structures like a throne room, fountains, and a treehouse.", createQs(
+                                "What fact about the this place is?",
+                                new String[] {"A. Was never completed due to financial issues", "B. One of the most popular fantasy world in Philippines", "C. Restricted to public due to risk of collapsing due to unfinished construction"}, 0,),
+                        new Beach("Lakeshore Area", "This quiet lakeshore area offers serene views of Taal Lake and is visited mostly by locals rather than tourists.", createQs(
+                                "It is known for?",
+                                new String[] {"A. Having a hidden natural hot spring that feeds into the lake", "B. Being a peaceful spot ideal for sunrise viewing and lakeside picnics", "C. Hosting the largest fish market in Batangas"}, 0,)
                 }));
 
-        municipalities.add(createMunicipality(2, "Taal", 20,
+        municipalities.add(createMunicipality(2, "Mabini", 20,
                 new Place[] {
-                        new HeritageSite("Old Town Hall", "Colonial architecture and murals.", createQs(
-                                "What style is the Old Town Hall?",
-                                new String[] {"Modern", "Colonial", "Art Deco"}, 1,
-                                "Which mural theme is displayed?",
-                                new String[] {"Harvest", "Space", "Technology"}, 0)),
-                        new Mountain("Taal Ridge", "Ridge overlooking the lake.", createQs(
-                                "What is the lake near the ridge called?",
-                                new String[] {"Laguna", "Taal Lake", "Balete Lake"}, 1,
-                                "Ridge hiking is best at what time?",
-                                new String[] {"Midnight", "Afternoon", "Morning"}, 2))
+                        new Mountain("Mount Gulugod Baboy", "Also known as Mount Gulbab, is a popular hiking destination in Mabini, Batangas, Philippines, known for its rolling hills that resemble a pig's spine. With stunning views of the surrounding mountains, neighboring islands, and coastline at the top, the hike is rated as easy to moderate and appropriate for novices.", createQs(
+                                "The highest peak, Pinagbanderahan meaning?",
+                                new String[] {"A. Where the flag was hoisted", "B. Endless assault", "C. Pig's spine"}, 1,),
+                        new Beach("Camp Netanya Resort and Spa", "A popular resort, known for its Greek-style architecture, stunning ocean views, and access to the rich marine sanctuary. Guests can enjoy activities such as snorkeling and kayaking, diving, and boat tours.", createQs(
+                                "Which one is true?",
+                                new String[] {"A. It is known for being a  Santorini-inspired beach resort", "B. It is known for being an Italy-inspired beach resort", "C. It is known for being a  Rome-inspired beach resort"}, 1,)
                 }));
 
-        municipalities.add(createMunicipality(3, "Nasugbu", 30,
+        municipalities.add(createMunicipality(3, "Laurel", 30,
                 new Place[] {
-                        new Beach("Calayo Cove", "Secluded cove with clear water.", createQs(
-                                "Calayo Cove is famous for which activity?",
-                                new String[] {"Surfing", "Snorkeling", "Skiing"}, 1,
-                                "What marine life is commonly seen?",
-                                new String[] {"Dolphins", "Penguins", "Polar bears"}, 0)),
-                        new Mountain("Pico del Sol", "A hill known for sunsets.", createQs(
-                                "Pico del Sol is best visited to watch?",
-                                new String[] {"Sunrise", "Noon", "Sunset"}, 2,
-                                "What feature defines its summit?",
-                                new String[] {"A cross", "A lighthouse", "A bench"}, 0))
+                        new Beach("Simbahan Bato", "There are many mythical stories about simbahang bato most commonly known as Kapilya ni San Gabriel Archangel in Laurel, Batangas. According to the elderly people who lived there, this place was already sacred even before it was turned into a church. Some elders said that they could hear beautiful and unique music coming from the cave.", createQs(
+                                "There is also a story that says that this cave is?",
+                                new String[] {"A. That this cave serve as a refuge for the animals back in the day", "B. served as a hiding place for people during Spanish and American war", "C. Ancient people use to do sacred rituals inside the cave"}, 1),
+                        new Beach("Ambon-Ambon Falls", " A tall, multi-tiered waterfall near Taal Lake, estimated to be around 60 meters high, with a name that means drizzle due to the light spray it creates.", createQs(
+                                "The falls are located in Laurel and are accessed via — from the Las Haciendas Estates jump-off point.",
+                                new String[] {"A. It can be reached by a paved road that leads directly to the waterfall", "B. It requires trekking through a forested trail and river pathways before reaching the falls", "C. It is an artificial waterfall created as part of a resort development"}, 2,)
                 }));
 
-        municipalities.add(createMunicipality(4, "Taysan", 40,
+        municipalities.add(createMunicipality(4, "Batangas", 40,
                 new Place[] {
-                        new HeritageSite("Heritage Museum", "Local crafts and stories.", createQs(
-                                "Museum exhibits focus on?",
-                                new String[] {"Local crafts", "Space travel", "Cars"}, 0,
-                                "What do visitors learn about?",
-                                new String[] {"Cuisine", "Planetary motion", "Quantum physics"}, 0)),
-                        new Beach("Taysan Shores", "Long stretch of golden sand.", createQs(
-                                "Taysan Shores sand is:",
-                                new String[] {"Black", "Golden", "White"}, 1,
-                                "A recommended activity: ",
-                                new String[] {"Sledding", "Beach volleyball", "Ice fishing"}, 1))
+                        new Mountain("Mt. Banoy", "A popular hiking destination located in Batangas City, Batangas. It is known for being a beginner-friendly mountain with well-established trails, scenic views of Batangas Bay, and a vantage point overlooking the city. Many hikers visit Mt. Banoy for day hikes because of its accessibility and relatively moderate difficulty.", createQs(
+                                "What is true about Mt. Banoy?",
+                                new String[] {"A. It is a volcanic mountain located at the boundary of Batangas and Laguna", "B. It is a mountain in Batangas City popular for day hikes and views of Batangas Bay", "C. It is the tallest mountain in Luzon, surpassing Mt. Pulag"}, 0,),
+                        new Mountain("Nacpan Point", "A quiet viewpoint area with a cliffside overlooking Batangas Bay.", createQs(
+                                "Nacpan Point is visited mainly for:",
+                                new String[] {"A. Extreme rock climbing", "B. Sunset viewing and panoramic photos of the coastline", "C. Its century-old lighthouse"}, 1,)
                 }));
 
-        municipalities.add(createMunicipality(5, "Calaca", 50,
+        municipalities.add(createMunicipality(5, "Cuenca", 50,
                 new Place[] {
-                        new Mountain("Calaca Peak", "A challenging climb with rewarding views.", createQs(
-                                "Calaca Peak elevation is best described as:",
-                                new String[] {"Low", "Medium", "High"}, 1,
-                                "What should hikers bring?",
-                                new String[] {"Sunscreen", "Ski gear", "Wetsuit"}, 0)),
-                        new HeritageSite("Old Lighthouse", "Abandoned lighthouse with legends.", createQs(
-                                "The lighthouse guided ships during:",
-                                new String[] {"Daytime", "Storms", "Solar eclipses"}, 1,
-                                "Legends say the light was powered by:",
-                                new String[] {"Magic", "Oil lamp", "Gasoline"}, 1))
+                        new Mountain("Lumampao", "Known for the Lumampao Viewdeck, a tourist spot offering scenic views of rolling hills and valleys, especially famous for its sunset panoramas. Cuenca itself is a municipality recognized for its rich culture, natural beauty.", createQs(
+                                "Sitio Ilaya View Deck is mostly visited for:",
+                                new String[] {"A. Its strong winds perfect for paragliding", "B. Its elevated spot ideal for overlooking Taal Lake", "C. Its underground tunnels"}, 1,),
+                        new Mountain("Mt. Maculot", "a popular, dormant stratovolcano in Cuenca, Batangas, Philippines, it features a main destination called — . The mountain is a significant tourist attraction and a popular destination for day hikes, especially for beginners.", createQs(
+                                "What is the main destination called?",
+                                new String[] {"A. Grotto Viewpoint", "B. Summit", "C. Rockies Viewpoint"}, 1,)
                 }));
     }
 
@@ -545,4 +521,5 @@ public class LakbayBatangas {
         game.play();
     }
 }
+
 
