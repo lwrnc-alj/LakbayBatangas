@@ -332,22 +332,48 @@ public class LakbayBatangas {
 private void setupMockData() {
 
     // TAAL — ONLY TAAL VOLCANO (1 question, no Basilica)
-    municipalities.add(createMunicipality(0, "Taal", 0,
-            new Place[]{
-                    new Mountain("Taal Volcano",
-                            "One of the popular attractions in this municipality is the Taal Volcano.",
-                            createQs(
-                                    "It is known for what unique geographical features?",
-                                    new String[]{
-                                            "A. Volcano within a lake, and a lake within a volcano",
-                                            "B. Volcano between two mountains",
-                                            "C. Volcano in the middle of the ocean, and a lake within a volcano"
-                                    },
-                                    0 // Correct
-                            )
-                    )
-            }
-    ));
+     municipalities.add(createMunicipality(0, "Taal", 0,
+        new Place[] {
+                new Mountain("Taal Volcano",
+                        "One of the popular attractions in this municipality is the Taal Volcano.",
+                        createQs(
+                                "It is known for what unique geographical features?",
+                                new String[] {
+                                        "A. Volcano within a lake, and a lake within a volcano",
+                                        "B. Volcano between two mountains",
+                                        "C. Volcano in the middle of the ocean, and a lake within a volcano"
+                                },
+                                0, // Correct
+                                "What type of volcano is Taal Volcano?",
+                                new String[] {
+                                        "A. Shield volcano",
+                                        "B. Stratovolcano",
+                                        "C. Caldera volcano"
+                                },
+                                2 // Correct
+                        )
+                ),
+                new HeritageSite("Basilica of St. Martin de Tours",
+                        "One of the largest churches in Asia, Taal Basilica is a Baroque-style heritage site famous for its grand architecture and historical significance.",
+                        createQs(
+                                "What is notable about Taal Basilica?",
+                                new String[] {
+                                        "A. It is the largest church in Asia",
+                                        "B. It is the oldest bamboo church in the Philippines",
+                                        "C. It was built entirely underground"
+                                },
+                                0,
+                                "What architectural style does Taal Basilica represent?",
+                                new String[] {
+                                        "A. Gothic",
+                                        "B. Baroque",
+                                        "C. Modernist"
+                                },
+                                1
+                        )
+                )
+        }
+));
 
     // LEMERY
     municipalities.add(createMunicipality(1, "Lemery", 5,
@@ -723,4 +749,5 @@ private Question[] createQs(String p1, String[] opts1, int c1,
         game.play();
     }
 }
+
 
