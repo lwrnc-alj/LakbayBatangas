@@ -350,7 +350,7 @@ private void setupMockData() {
     ));
 
     // LEMERY
-    municipalities.add(createMunicipality(1, "Lemery", 10,
+    municipalities.add(createMunicipality(1, "Lemery", 5,
             new Place[]{
                     new HeritageSite("Fantasy World",
                             "A medieval-themed amusement park. The main attraction is the large, colorful castle, but it also features other structures like a throne room, fountains, and a treehouse.",
@@ -723,3 +723,4 @@ private Question[] createQs(String p1, String[] opts1, int c1,
         game.play();
     }
 }
+
